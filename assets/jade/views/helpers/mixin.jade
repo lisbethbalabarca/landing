@@ -1,0 +1,24 @@
+mixin jpg(nameimg)
+	img(src="assets/img/" + nameimg + ".jpg")
+mixin png(nameimg)
+	img.img-responsive(src="assets/img/" + nameimg + ".png")
+
+mixin offer_description()
+	h4 Deliver Wide
+	span *****
+	span.red $218.00
+
+mixin offer(img1, img2, img3, img4)
+	.row
+		.col-md-3
+			+jpg(img1)
+			+offer_description()
+		.col-md-3
+			+jpg(img2)
+			+offer_description()
+		.col-md-3
+			+jpg(img3)
+			+offer_description()
+		.col-md-3
+			+jpg(img4)
+			+offer_description()

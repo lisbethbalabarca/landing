@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "San Francisco";
+  src: url("../../assets/font/SF-UI-Display-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  src: url("../../assets/font/SF-UI-Display-Light.woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  src: url("../../assets/font/SF-UI-Display-Medium.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  src: url("../../assets/font/SF-UI-Display-UltraLight.woff");
+  font-weight: lighter;
+}
+
+* {
+  font-family: "San Francisco";
+}
+
+aside {
+  height: 900px;
+  background: url(../img/Fotolia_81268168_M.png) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+aside .opacity {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 900px;
+}
+
+aside .logo {
+  padding: 3%;
+}
+
+aside input {
+  width: 100%;
+  margin-bottom: 8%;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 2%;
+  border: none;
+  border-radius: 5px;
+}
+
+aside .inscription {
+  padding-top: 3%;
+}
+
+@media (max-width: 767px) {
+  aside .inscription {
+    display: block;
+  }
+}
+
+aside .inscription .info h2 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+aside .inscription .info ol, aside .inscription .info ul {
+  font-weight: 100;
+  font-size: 18px;
+}
+
+aside .inscription .info ol li, aside .inscription .info ul li {
+  margin-bottom: 4%;
+}
+
+aside .inscription .info ul {
+  padding: 0;
+  list-style: none;
+}
+
+aside .inscription .form {
+  background-color: rgba(8, 8, 8, 0.56);
+  padding: 8% 3% 5%;
+  border-radius: 15px;
+  margin-left: 11.666667%;
+}
+
+@media (max-width: 767px) {
+  aside .inscription .form {
+    margin-left: 0;
+  }
+}
+
+aside .inscription .form .caution {
+  width: 100%;
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 6% 0;
+}
+
+aside .inscription .form .btn {
+  border: none;
+}
+
+aside .inscription .form .boton {
+  width: 33%;
+  float: right;
+  background-color: #8EB22A;
+  font-size: 18px;
+}
+
+aside .inscription .form .selfie {
+  background-color: #00BCD0;
+  font-size: 18px;
+}
+
+aside .inscription .info {
+  padding-top: 2%;
+}
+
+*::-webkit-input-placeholder {
+  /* Google Chrome y Safari */
+  color: #6a6a6a;
+  font-weight: 100;
+  font-size: 18px;
+  padding-left: 2%;
+}
+
+#offer h2 {
+  font-weight: bold;
+  font-size: 48px;
+  margin: 4% 0;
+}
+
+#offer h4 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#offer .shop {
+  color: #000;
+}
+
+#offer .item {
+  color: #000;
+}
+
+#offer .alcance, #offer .time, #offer .realprice {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#offer .alcance, #offer .time {
+  color: #FF2e41;
+}
+
+footer {
+  padding: 3%;
+  background-color: #000;
+  height: auto;
+  overflow: hidden;
+  color: #fff;
+}
+
+footer h5 {
+  font-weight: 100;
+  font-size: 24px;
+}
+
+footer a {
+  font-weight: lighter;
+  font-size: 20px;
+  color: #fff;
+}
+
+footer .promo {
+  margin-left: 4%;
+}
