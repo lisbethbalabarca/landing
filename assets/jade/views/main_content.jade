@@ -1,24 +1,33 @@
-aside
+aside#change
 	.opacity
 		.container.inscription
 			.row
 				.col-md-12.logo
 					img.img-responsive(src='./assets/img/Logo superior.png')
 				.col-xs-12.col-sm-12.col-md-6.info
+					h2.title Uno de estos descuentos puede ser para ti.
 					h2	¿Cómo conseguirlo?
+					h3
+						strong Fácil, <span>sigue los tres pasos siguientes</span>
 					ol
 						li Déjanos tus datos, completa el cuadro de al lado con tu información.
-						li Sube tu selfie en cualquier lugar túristico. *1
-						li Escoge tu descuento favorito, según los puntos obtenidos y canjea. *2
+						li Sube tu selfie en cualquier lugar túristico.(nacional e internacional)<sup>1</sup>
+						li Escoge tu descuento favorito, según los puntos obtenidos y canjea. <sup>2</sup>
 					ul
 						li *1 En el fondo de la foto se debe apreciar claramente el lugar, los foto montajes no serán considerados
 						li *2 En un tiempo estimado de 24 hrs nos contactaremos contigo vía email para darte una respuesta.
+					h3 Recuerda que:
+					p Por registrarte te llevarás 10 puntos, por subir un selfie otros 15 puntos más y por compartir con tus amigos la publicación de facebook 20 puntos adicionales.
+					h3 ¿No es suficiente?
+					p Porque somos aventureros como tú y mucho nunca es suficiente, por cada selfie creativa (divertida e interesante) que muestre tu lado más aventurero te daremos una mejor puntuación. Lo que significa más puntos y por lo tanto, más descuentos.
+					Así de fácil puedes conseguir descuentos con The Tourist, comienza ahora.¡Pasa la voz! 
 				.col-xs-12.col-sm-12.col-md-4.col-md-offset-2.form.text-center
-					form(action='send.php', method='post')
+					form(action='send.php', method='post', enctype='multipart/form-data')
 						input#name(type='text', name='name', placeholder='Nombre completo', required='')
 						input#email(type='text', name='email', placeholder='Correo', required='')
 						input#dni(type='text', name='dni', placeholder='DNI o Pasaporte', required='')
-						input.btn.btn-warning.selfie(type='submit', name='agree', value='Subir un Selfie', onclick='formReset()')
+						input.btn.btn-warning.selfie#get_file(type='button', name='agree', value='Subir un Selfie')
+						input#my_file(type="file", name='my_file')
 					.condiciones.text-left
 						p.caution La foto deberá ser verídica y no tener retoques, ya que pasará por una revisión del equipo TheTourist para determinar su veracidad.Las personas que no cumplan con este requisito, se verán suspendidas de la comunidad The Tourist.
-					input.btn.btn-warning.boton(type='submit', name='submit', value='Participar', onclick='formReset()')
+					button.btn.btn-warning.boton(type='button', name='boton01', id="boton01" value="remove") Participar

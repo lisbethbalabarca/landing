@@ -14,34 +14,42 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <aside>
+    <aside id="change">
       <div class="opacity">
         <div class="container inscription">
           <div class="row">
             <div class="col-md-12 logo"><img src="./assets/img/Logo superior.png" class="img-responsive"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 info">
+              <h2 class="title">Uno de estos descuentos puede ser para ti.</h2>
               <h2>	¿Cómo conseguirlo?</h2>
+              <h3><strong>Fácil, <span>sigue los tres pasos siguientes</span></strong></h3>
               <ol>
                 <li>Déjanos tus datos, completa el cuadro de al lado con tu información.</li>
-                <li>Sube tu selfie en cualquier lugar túristico. *1</li>
-                <li>Escoge tu descuento favorito, según los puntos obtenidos y canjea. *2</li>
+                <li>Sube tu selfie en cualquier lugar túristico.(nacional e internacional)<sup>1</sup></li>
+                <li>Escoge tu descuento favorito, según los puntos obtenidos y canjea. <sup>2</sup></li>
               </ol>
               <ul>
                 <li>*1 En el fondo de la foto se debe apreciar claramente el lugar, los foto montajes no serán considerados</li>
                 <li>*2 En un tiempo estimado de 24 hrs nos contactaremos contigo vía email para darte una respuesta.</li>
               </ul>
+              <h3>Recuerda que:</h3>
+              <p>Por registrarte te llevarás 10 puntos, por subir un selfie otros 15 puntos más y por compartir con tus amigos la publicación de facebook 20 puntos adicionales.</p>
+              <h3>¿No es suficiente?</h3>
+              <p>Porque somos aventureros como tú y mucho nunca es suficiente, por cada selfie creativa (divertida e interesante) que muestre tu lado más aventurero te daremos una mejor puntuación. Lo que significa más puntos y por lo tanto, más descuentos.</p>
+              <As>í de fácil puedes conseguir descuentos con The Tourist, comienza ahora.¡Pasa la voz! </As>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-2 form text-center">
-              <form action="send.php" method="post">
+              <form action="send.php" method="post" enctype="multipart/form-data">
                 <input id="name" type="text" name="name" placeholder="Nombre completo" required="">
                 <input id="email" type="text" name="email" placeholder="Correo" required="">
                 <input id="dni" type="text" name="dni" placeholder="DNI o Pasaporte" required="">
-                <input type="submit" name="agree" value="Subir un Selfie" onclick="formReset()" class="btn btn-warning selfie">
+                <input id="get_file" type="button" name="agree" value="Subir un Selfie" class="btn btn-warning selfie">
+                <input id="my_file" type="file" name="my_file">
               </form>
               <div class="condiciones text-left">
                 <p class="caution">La foto deberá ser verídica y no tener retoques, ya que pasará por una revisión del equipo TheTourist para determinar su veracidad.Las personas que no cumplan con este requisito, se verán suspendidas de la comunidad The Tourist.</p>
               </div>
-              <input type="submit" name="submit" value="Participar" onclick="formReset()" class="btn btn-warning boton">
+              <button type="button" name="boton01" id="boton01" value="remove" class="btn btn-warning boton">Participar</button>
             </div>
           </div>
         </div>
@@ -51,33 +59,37 @@
       <div class="col-md-12 shop text-center">
         <h2>	¡Vive la experiencia de estos descuentos!</h2>
         <div class="col-md-3 item"><img src="assets/img/D1.jpg"/>
-          <h4>Adrenalidana en Sandboarding</h4>
+          <h4>Sandboard y Sandbuggles</h4>
+          <h5>Full adrenalina</h5>
           <p class="realprice">
-            <strike>Precio Real: s/. 40.00</strike>
+            <strike>Precio Real: s/. 70.00</strike>
           </p>
           <p class="alcance"> <strong>Quedan 10 cupos.</strong></p>
           <p class="time"> <strong>Tiempo Ilimitado: 3d 20:45:30</strong></p>
         </div>
         <div class="col-md-3 item"><img src="assets/img/D2.jpg"/>
-          <h4>Calidad  en el restaurante SSSS</h4>
+          <h4>Islas Ballestas</h4>
+          <h5>Misterio y Aventura</h5>
           <p class="realprice">
-            <strike>Precio Real: s/. 24.00</strike>
+            <strike>Precio Real: s/. 60.00</strike>
           </p>
           <p class="alcance"> <strong>Quedan 5 cupos.</strong></p>
           <p class="time"> <strong>Tiempo Ilimitado: 3d 20:45:30</strong></p>
         </div>
         <div class="col-md-3 item"><img src="assets/img/D3.jpg"/>
-          <h4>Aventura en los Areneros</h4>
+          <h4>Reserva Paracas</h4>
+          <h5>Paraiso Marítimo</h5>
           <p class="realprice">
-            <strike>Precio Real: s/. 60.00</strike>
+            <strike>Precio Real: s/. 50.00</strike>
           </p>
           <p class="alcance"><strong>Quedan 15 cupos.</strong></p>
           <p class="time"><strong>Tiempo Ilimitado: 3d 20:45:30</strong></p>
         </div>
         <div class="col-md-3 item"><img src="assets/img/D4.jpg"/>
-          <h4>Comodidad en el hotel Las Dunas</h4>
+          <h4>Ica</h4>
+          <h5>Ciudad del eterno sol.</h5>
           <p class="realprice">
-            <strike>Precio Real: s/. 150.00</strike>
+            <strike>Precio Real: s/. 40.00</strike>
           </p>
           <p class="alcance"><strong>Quedan 5 cupos.</strong></p>
           <p class="time"><strong>Tiempo Ilimitado: 3d 20:45:30</strong></p>
@@ -101,5 +113,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
